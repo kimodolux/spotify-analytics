@@ -1,9 +1,30 @@
-import axios from 'axios';
+import axios from 'axios'
 
-export default axios.create({
-    baseURL: 'https://api.spotify.com/v1',
-    headers: {
-        Authorization: 'Basic 89450131baf446758afdb5f94f35281d:89d19ed11efa4cc7931cb4c67dd7cbca',
-    },
-    }
-);
+const client_id = '89450131baf446758afdb5f94f35281d';
+const redirect_uri = 'http://localhost:3000/callback';
+
+export const requestToken =  () => {
+    axios({
+        method: 'get',
+        url:'https://accounts.spotify.com/authorize',
+        params: {
+            client_id,
+            response_type :'token',
+            redirect_uri,
+            scope: 'user-top-read',
+            state: 'state'
+        },
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': 'true'
+        },
+    }).then(response => {
+        console.log(response)
+    }).catch(e=>{
+        console.log(e.response)
+    });
+    //dispatch({type: 'GET_TOKEN', payload: response.data});
+};
+
+

@@ -1,7 +1,9 @@
-export const getToken = token =>{
+export const setToken = (token) => async dispatch =>{
     //return an action
-    return{
-        type: 'TOKEN_SUCCESS',
-        payload: token
-    };
+    dispatch({type: 'SET_TOKEN', payload: token});
+}
+
+export const resetToken = () => async dispatch =>{
+    //return an action
+    dispatch({type: 'RESET_TOKEN'});
 }
