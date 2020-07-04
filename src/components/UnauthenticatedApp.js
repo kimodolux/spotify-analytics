@@ -18,18 +18,13 @@ componentDidMount() {
     let _token =  window.location.hash.substr(1).split('&')[0].split("=")[1];
     window.location.hash = "";
     if (_token) {
-        // Set token
-        //call an action say singed in and set token
         this.props.setToken(_token);
-        // this.setState({
-        //     token: _token
-        // });
     }
   }
     render(){
         return(
             <div>
-                <div className='ui inverted vertical masthead center aligned segment'>
+                <div className='ui inverted vertical masthead center aligned segment full-screen'>
                     <div className = 'ui text container centered'>
                         <h1 className ='ui inverted header'>Welcome to Spotify Analytics</h1>
                         <a href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`}>

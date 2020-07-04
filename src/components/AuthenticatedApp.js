@@ -1,8 +1,15 @@
 import React from 'react';
+import Sidemenu from './Sidemenu'
+import MainWindow from './MainWindow'
 
 class AuthenticatedApp extends React.Component{
     render(){
-        return <div> AuthenticatedApp </div>
+        return(
+            <div className='ui inverted vertical masthead segment full-screen'>
+                <Sidemenu/>
+                <MainWindow/>
+            </div>
+        )
     }
 }
 

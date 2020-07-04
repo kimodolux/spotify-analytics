@@ -1,8 +1,31 @@
+html,
+body,
+.full-screen {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+
 .masthead{
-    min-height: 700px;
+    height:100%;
+    width:100%;
 }
 
 .centered{
     margin-top: 3em;
     margin-bottom: 0em;
+}
+
+.footer{
+    height: 40px;
+    bottom: 0px;
+}
+
+.mainwindow{
+    padding-left: 15rem;
 }

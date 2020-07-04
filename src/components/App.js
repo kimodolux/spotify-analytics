@@ -5,7 +5,6 @@ import UnauthenticatedApp from './UnauthenticatedApp'
 
 class App extends React.Component{
     render(){
-        console.log(this.props)
         return this.props.authToken ? <AuthenticatedApp/> : <UnauthenticatedApp/>;
     }
 }
