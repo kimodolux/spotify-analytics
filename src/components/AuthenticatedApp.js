@@ -5,7 +5,7 @@ import MainWindow from './MainWindow'
 class AuthenticatedApp extends React.Component{
     render(){
         return(
-            <div className='ui inverted vertical masthead segment full-screen'>
+            <div className='ui inverted masthead full-screen'>
                 <Sidemenu/>
                 <MainWindow/>
             </div>

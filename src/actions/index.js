@@ -29,3 +29,7 @@ export const fetchPlaylist = (token, playlistId) => async dispatch =>{
     });
     dispatch({type: 'FETCH_SELECTED_PLAYLIST', payload: response.data});
 }
+
+export const selectSong = (song) => dispatch =>{
+    dispatch({type: 'FETCH_SELECTED_SONG', payload: song});
+}

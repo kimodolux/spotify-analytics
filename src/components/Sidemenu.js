@@ -24,7 +24,7 @@ class Sidemenu extends React.Component{
     }
     render(){
         return(
-            <div className='ui inverted visible sidebar vertical menu'>
+            <div className='ui inverted visible sidebar vertical menu sidemenu'>
                 <h1> Playlists </h1>
                 {this.renderPlaylists()}
             </div>

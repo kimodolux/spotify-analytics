@@ -1,19 +1,9 @@
 html,
 body,
 .full-screen {
-    width: 100%;
+    width: auto;
     min-height: 100vh;
-    height: 100%;
-}
-
-body {
-	margin: 0;
-}
-
-
-.masthead{
-    height:100%;
-    width:100%;
+    height: auto;
 }
 
 .centered{
@@ -27,5 +17,13 @@ body {
 }
 
 .mainwindow{
-    padding-left: 15rem;
+    display: table;
+    position: relative;
+    padding-left: 25%;
+    padding-top: 2%;
+    overflow-y:auto;
+}
+
+.sidemenu{
+    position: absolute;
 }

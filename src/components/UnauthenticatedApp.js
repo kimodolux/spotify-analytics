@@ -35,9 +35,6 @@ componentDidMount() {
                         </a>
                     </div>
                 </div>
-                <div>
-                    Info
-                </div>
             </div>
         )
     }
