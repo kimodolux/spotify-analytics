@@ -17,13 +17,18 @@ body,
 }
 
 .mainwindow{
-    display: table;
-    position: relative;
-    padding-left: 25%;
-    padding-top: 2%;
     overflow-y:auto;
+    background-color: slategray;
+    min-height: 100vh;
+    height: auto;
 }
 
 .sidemenu{
     position: absolute;
 }
+
+.songlist{
+    position: relative;
+    padding-top: 2%;
+}
+

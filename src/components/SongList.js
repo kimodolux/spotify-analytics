@@ -10,9 +10,16 @@ class SongList extends React.Component {
     renderPlaylistInfo = () => {
         if(this.props.selectedPlaylist){
             return(
-                <div>
+                <div className='ui'>
                     <h1>{ this.props.selectedPlaylist.name }</h1>
                     <p> { this.props.selectedPlaylist.description} </p>
+                </div>
+            )
+        }
+        else{
+            return(
+                <div className='ui'>
+                    <p>Select a playlist</p>
                 </div>
             )
         }
@@ -22,10 +29,10 @@ class SongList extends React.Component {
         if(this.props.selectedPlaylist){
             return this.props.selectedPlaylist.tracks.items.map(song => {
                 return(
-                    <div className="item" key={song.track.id}>
-                        <img className="ui mini image" src={song.track.album.images[2].url} alt='album art' onClick={() => this.selectSong(song.track)}></img>
-                        <div className="content">
-                            <div className="white" onClick={() => this.selectSong(song.track)}> Song: {song.track.name} </div>
+                    <div className='item' key={song.track.id} >
+                        <img className='ui mini image' src={song.track.album.images[2].url} alt='album art' onClick={() => this.selectSong(song.track)}></img>
+                        <div className='content'>
+                            <div className='white'> Song: {song.track.name} </div>
                             <div className='white'> Album: {song.track.album.name} </div>
                             <div className='white'> Artist: {song.track.artists[0].name} </div>
                         </div>
@@ -37,7 +44,7 @@ class SongList extends React.Component {
 
     render() {
         return (
-            <div className="ui relaxed divided list ">
+            <div className="ui relaxed divided list songlist">
                 {this.renderPlaylistInfo()}
                 {this.renderTracks()}
             </div>
