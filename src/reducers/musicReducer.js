@@ -6,6 +6,8 @@ export default (state = {}, action) =>{
             return {...state, selectedPlaylist: action.payload};
         case "FETCH_SELECTED_SONG":
             return {...state, selectedSong: action.payload};
+        case "FETCH_LYRICS":
+            return {...state, songLyrics: [...state.songLyrics, action.payload]}
         default:
             return state;
     }

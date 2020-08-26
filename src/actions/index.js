@@ -33,3 +33,9 @@ export const fetchPlaylist = (token, playlistId) => async dispatch =>{
 export const selectSong = (song) => dispatch =>{
     dispatch({type: 'FETCH_SELECTED_SONG', payload: song});
 }
+
+export const fetchLyrics = (songId, songName) => dispatch =>{
+    const lyrics = 'PLACE HOLDER';
+    let song = {id: songId, name: songName, lyrics}
+    dispatch({type: 'FETCH_LYRICS', payload: song})
+}
