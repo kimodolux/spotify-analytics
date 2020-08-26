@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 const clientId = "89450131baf446758afdb5f94f35281d";
-const redirectUri = "http://localhost:3000/callback";
+const redirectUri = "https://spotify-analytics-cp.herokuapp.com/callback";
 const scopes = [
      "user-top-read",
      "user-read-currently-playing",
